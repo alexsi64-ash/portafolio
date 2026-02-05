@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar"
 function App() {
   return (
     <>
-      <div className="antialiased text-slate-900">
+      <div className="min-h-screen">
         <Navbar />
         <main className="pt-16">
           <Hero />

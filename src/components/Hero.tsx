@@ -1,34 +1,58 @@
-import { personalInfo } from "../data/cvData";
-import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { personalInfo, reconocimiento } from '../data/cvData';
+import { Mail, MapPin, Download, Trophy } from 'lucide-react';
 
 export const Hero = () => {
-    return (
-        <section className="min-h-[70vh] flex flex-col justify-center items-center text-center p-6 bg-gradient-to-b from-slate-50 to-white">
-            <div className="max-w-3xl">
-                <h2 className="text-blue-600 font-semibold tracking-wide uppercase mb-2">
-                    {personalInfo.titulo}
-                </h2>
-                <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6">
-                    <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                        Egresado del INCOS Santa Cruz con pasión por el desarrollo de software y la innovación tecnológica. 
-                        Ganador del 1er lugar en la Feria de Proyectos de Innovación 2025.
-                    </p>
-                </h1>
+  // Tomamos el primer premio (el de 2025) para resaltarlo
+  const primerPremio = reconocimiento[0];
 
-                <div className="flex flex-wrap justify-center gap-4 mb-10">
-                    <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">
-                        <Mail size={18} /> Contactame
-                    </a>
-                    <button className="flex items-center gap-2 border-2 border-slate-900 px-6 py-3 rounded-full hover:bg-slate-50 transition">
-                        Ver Proyectos <ExternalLink size={18} />
-                    </button>
-                </div>
+  return (
+    <section className="bg-white py-20 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        
+        {/* Lado Izquierdo: Texto */}
+        <div className="flex-1 space-y-6">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
+            <Trophy size={16} />
+            {primerPremio.titulo}
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight">
+            Soy <span className="text-blue-600">{personalInfo.nombre}</span>
+          </h1>
+          
+          <p className="text-xl text-slate-600 max-w-lg">
+            {personalInfo.titulo}. Especialista en soluciones informáticas y apasionado por el desarrollo de software. 
+            Egresado del <span className="font-semibold">INCOS Santa Cruz</span>.
+          </p>
 
-                <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-slate-500 text-sm">
-                    <span className="flex items-center gap-1"><MapPin size={16} /> {personalInfo.direccion}</span>
-                    <span className="flex items-center gap-1"><Phone size={16} /> {personalInfo.celular}</span>
-                </div>
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a href={`mailto:${personalInfo.email}`} 
+               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+              Contáctame
+            </a>
+            <button className="flex items-center gap-2 border-2 border-slate-200 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 transition">
+              Descargar CV <Download size={20} />
+            </button>
+          </div>
+
+          <div className="flex gap-6 text-slate-500 pt-4">
+            <div className="flex items-center gap-2">
+              <MapPin size={18} />
+              <span className="text-sm">{personalInfo.direccion}</span>
             </div>
-        </section>
-    )
-}
+          </div>
+        </div>
+
+        {/* Lado Derecho: Un elemento visual o decorativo */}
+        <div className="flex-1 flex justify-center">
+           <div className="relative w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-3xl rotate-3 flex items-center justify-center border-2 border-blue-200 shadow-xl">
+              {/* Aquí luego podrías poner tu foto o un icono grande de código */}
+              <div className="absolute inset-0 bg-white/40 backdrop-blur-sm -rotate-6 rounded-3xl border border-slate-100 -z-10"></div>
+              <span className="text-7xl">💻</span>
+           </div>
+        </div>
+
+      </div>
+    </section>
+  );
+};
