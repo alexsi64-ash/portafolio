@@ -52,3 +52,46 @@ export const cursos = [
   { nombre: "React con Ejercicios Prácticos", plataforma: "Codigofacilito", fecha: "Julio 2025" },
   { nombre: "Ciberseguridad", plataforma: "ClaseFlix", fecha: "Enero 2025" } 
 ];
+
+export const experiencia = [
+  {
+    cargo: "Pasante de Soporte Técnico",
+    empresa: "Dirección Departamental de Educación de Santa Cruz",
+    periodo: "Feb 2025 - Abr 2025",
+    tareas: [
+      "Mantenimiento preventivo y correctivo de equipos de computación.",
+      "Instalación y configuración de software y redes.",
+      "Apoyo logístico y técnico en eventos institucionales.",
+      "Adecuación de áreas tecnológicas para conferencias."
+    ]
+  },
+  {
+    cargo: "Coordinador de Call Center",
+    empresa: "Optimiza",
+    periodo: "Oct 2021 - Abr 2022",
+    tareas: [
+      "Supervisión de operadores y gestión de campañas.",
+      "Manejo de bases de datos y programación de software de gestión.",
+      "Coordinación de actividades y generación de reportes de métricas."
+    ]
+  },
+  {
+    cargo: "Coordinador de Personal / Proyectos",
+    empresa: "Carlos Caballero S.R.L.",
+    periodo: "Jun 2014 - Dic 2015",
+    tareas: [
+      "Gestión de personal y logística en proyectos industriales de gran escala.",
+      "Administración de recursos humanos, almacén y proveedores.",
+      "Manejo de caja chica y control de inventarios."
+    ]
+  },
+  {
+    cargo: "Diseñador Gráfico Freelance",
+    empresa: "Independiente",
+    periodo: "Ago 2018 - Ago 2021",
+    tareas: [
+      "Diseño de material publicitario (afiches, tarjetas, volantes).",
+      "Uso profesional de Adobe Photoshop e Illustrator para marcas locales."
+    ]
+  }
+];
