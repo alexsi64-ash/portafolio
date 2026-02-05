@@ -1,5 +1,6 @@
 import { Educacion } from "./components/Educacion"
 import { Experiencia } from "./components/Experiencia"
+import { Footer } from "./components/Footer"
 import { Habilidades } from "./components/Habilidades"
 import { Hero } from "./components/Hero"
 import { Navbar } from "./components/Navbar"
@@ -16,6 +17,7 @@ function App() {
           <Reconocimientos />
           <Habilidades />
           <Educacion />
+          <Footer />
         </main>
       </div>
     </>
