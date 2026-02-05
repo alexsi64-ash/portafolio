@@ -1,4 +1,5 @@
 import { Experiencia } from "./components/Experiencia"
+import { Habilidades } from "./components/Habilidades"
 import { Hero } from "./components/Hero"
 import { Navbar } from "./components/Navbar"
 import { Reconocimientos } from "./components/Reconocimientos"
@@ -12,6 +13,7 @@ function App() {
           <Hero />
           <Experiencia />
           <Reconocimientos />
+          <Habilidades />
         </main>
       </div>
     </>
