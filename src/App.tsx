@@ -1,5 +1,7 @@
+import { Experiencia } from "./components/Experiencia"
 import { Hero } from "./components/Hero"
 import { Navbar } from "./components/Navbar"
+import { Reconocimientos } from "./components/Reconocimientos"
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
         <Navbar />
         <main className="pt-16">
           <Hero />
+          <Experiencia />
+          <Reconocimientos />
         </main>
       </div>
     </>
