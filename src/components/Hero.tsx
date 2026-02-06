@@ -49,7 +49,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-zinc-800/40 backdrop-blur-sm -rotate-6 rounded-3xl border border-zinc-800 -z-10"></div>
               
               <span className="text-8xl drop-shadow-[0_0_20px_rgba(220,38,38,0.4)] select-none">
-                💻
+                <img src="../../public/ash-dev.png" alt="" />
               </span>
             </div>
         </div>
