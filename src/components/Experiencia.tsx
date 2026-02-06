@@ -1,5 +1,5 @@
 import { experiencia } from '../data/cvData';
-import { Terminal, Calendar, ShieldCheck } from 'lucide-react';
+import { Calendar, ShieldCheck } from 'lucide-react';
 
 export const Experiencia = () => {
   // Filtramos para mostrar solo la pasantía o roles técnicos
