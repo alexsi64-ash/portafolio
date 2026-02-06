@@ -37,7 +37,6 @@ export const Habilidades = () => {
     { nombre: 'Backend', datos: skills.backend, icono: <Database size={20} /> },
     { nombre: 'Herramientas', datos: skills.herramientas, icono: <Settings size={20} /> },
     { nombre: 'Sistemas', datos: skills.sistemas, icono: <Terminal size={20} /> },
-    // { nombre: 'Diseño', datos: skills.diseño, icono: <Palette size={20} /> },
   ];
 
   const containerVariants: Variants = {
@@ -53,16 +52,10 @@ export const Habilidades = () => {
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0 
-    }
+    visible: { opacity: 1, y: 0 }
   };
 
   return (
-    /* bg-[#1A1A1A]: Fondo gris para separar secciones.
-       border-y con AZUL TEC (#1e293b) para delimitación técnica.
-    */
     <section id="habilidades" className="py-24 bg-[#1A1A1A] border-y border-[#1e293b]/30 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-12">
@@ -91,13 +84,9 @@ export const Habilidades = () => {
               variants={itemVariants}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5 }}
-              /* bg-[#0D0D0D]: Card negra sobre fondo gris.
-                 border-[#1e293b]: El Azul Tec definiendo la silueta.
-              */
               className="min-w-[280px] sm:min-w-[320px] md:min-w-0 snap-center p-6 rounded-2xl bg-[#0D0D0D] border border-[#1e293b] hover:border-[#F24130]/30 transition-all duration-300 group shadow-xl"
             >
               <div className="flex items-center gap-3 mb-8">
-                {/* Icono con fondo gris oscuro y efecto glow rojo en hover */}
                 <div className="p-2.5 bg-[#1A1A1A] rounded-xl text-[#F24130] border border-[#1e293b] group-hover:bg-[#F24130] group-hover:text-white transition-all duration-500 shadow-[0_0_0_rgba(242,65,48,0)] group-hover:shadow-[0_0_20px_rgba(242,65,48,0.4)]">
                   {cat.icono}
                 </div>
@@ -111,9 +100,9 @@ export const Habilidades = () => {
                     whileHover={{ x: 5 }}
                     className="flex items-center gap-3 group/item"
                   >
-                    {/* Contenedor del icono con Azul Tec */}
                     <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#1A1A1A] border border-[#1e293b]/50 group-hover/item:border-[#F24130]/50 transition-all duration-300">
-                      <i className={`${getIconClass(skill)} text-2xl filter grayscale group-hover/item:grayscale-0 transition-all`}></i>
+                      {/* HEMOS ELIMINADO EL FILTRO GRAYSCALE AQUÍ */}
+                      <i className={`${getIconClass(skill)} text-2xl transition-transform group-hover/item:scale-110`}></i>
                     </div>
                     <span className="text-[#A6A6A6] font-medium group-hover/item:text-[#F24130] transition-colors text-sm">
                       {skill}
@@ -125,7 +114,6 @@ export const Habilidades = () => {
           ))}
         </motion.div>
         
-        {/* Indicador visual móvil optimizado */}
         <div className="flex justify-center gap-1 mt-4 md:hidden">
           <div className="w-8 h-1 bg-[#1e293b] rounded-full overflow-hidden">
             <div className="h-full bg-[#F24130] animate-pulse"></div>
