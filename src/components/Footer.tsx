@@ -1,4 +1,5 @@
 import { Github, Terminal, Cpu } from 'lucide-react';
+import { personalInfo } from '../data/cvData';
 
 export const Footer = () => {
   return (
@@ -36,7 +37,7 @@ export const Footer = () => {
           {/* Social / Github */}
           <div className="flex justify-center md:justify-end">
             <a 
-              href="https://github.com/TU_USUARIO" 
+              href="https://github.com/alexsi64-ash" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl text-zinc-400 hover:text-white hover:border-red-600/50 transition-all"
@@ -49,10 +50,10 @@ export const Footer = () => {
 
         {/* Copyright y Stack */}
         <div className="pt-8 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs font-mono text-zinc-600 uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} — Alexander Silva Huanca</p>
+          <p>© {new Date().getFullYear()} — {personalInfo.nombre}</p>
           <div className="flex items-center gap-2 italic">
             <Cpu size={12} />
-            <span>Optimized for performance & reliability</span>
+            <span>{personalInfo.titulo}</span>
           </div>
         </div>
       </div>

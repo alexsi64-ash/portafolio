@@ -6,9 +6,9 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Inicio', href: '#' },
-    { name: 'Sobre mí', href: '#sobre-mi' },
+    { name: 'Logros', href: '#premios' },
+    { name: 'habilidades', href: '#habilidades'},
     { name: 'Experiencia', href: '#experiencia' },
-    { name: 'Premios', href: '#premios' },
     { name: 'Proyectos', href: '#proyectos' },
   ];
 
