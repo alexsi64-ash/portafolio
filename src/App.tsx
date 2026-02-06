@@ -12,7 +12,7 @@ import { Servicios } from "./components/Servicios"
 function App() {
   return (
     <>
-      <div className="min-h-screen bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 selection:text-blue-200">
+      <div className="min-h-screen bg-[#0D0D0D] text-[#F2F2F2] selection:bg-[#F24130]/30 selection:text-[#F24130]">
         <Navbar />
         <main className="pt-16">
           <Toaster position="bottom-right" theme="dark" richColors />

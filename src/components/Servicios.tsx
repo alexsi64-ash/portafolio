@@ -16,13 +16,14 @@ export const Servicios = () => {
   };
 
   return (
-    <section id="servicios" className="py-10"> {/* Sin bg-zinc-950 para heredar bg-slate-950 */}
+    /* bg-[#0D0D0D]: Fondo negro para contrastar con la sección de Proyectos anterior */
+    <section id="servicios" className="py-24 bg-[#0D0D0D]">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Soluciones y <span className="text-red-600">Servicios</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#F2F2F2] mb-4">
+            Soluciones y <span className="text-[#F24130]">Servicios</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto font-mono text-sm">
+          <p className="text-[#A6A6A6] max-w-2xl mx-auto font-mono text-sm">
             &gt; Optimizando la infraestructura y procesos de su empresa.
           </p>
         </div>
@@ -36,26 +37,30 @@ export const Servicios = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-red-600/40 transition-all duration-300 group relative overflow-hidden"
+              /* bg-[#1A1A1A]: Card en gris carbón para resaltar sobre el fondo negro 
+                 border-[#1e293b]: El Azul Tec definiendo el borde de servicio técnico
+              */
+              className="p-8 rounded-2xl bg-[#1A1A1A] border border-[#1e293b] hover:border-[#F24130]/40 transition-all duration-300 group relative overflow-hidden shadow-xl"
             >
-              <div className="text-red-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-[#F24130] mb-6 group-hover:scale-110 transition-transform duration-300">
                 {iconMap[servicio.icono]}
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-500 transition-colors">
+              <h3 className="text-xl font-bold text-[#F2F2F2] mb-3 group-hover:text-[#F24130] transition-colors">
                 {servicio.titulo}
               </h3>
               
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-[#A6A6A6] text-sm leading-relaxed">
                 {servicio.descripcion}
               </p>
 
-              <div className="mt-6 w-10 h-1 bg-slate-800 group-hover:w-full group-hover:bg-red-600 transition-all duration-500 rounded-full"></div>
+              {/* Barra de acento Azul Tec que pasa a Rojo en hover */}
+              <div className="mt-6 w-10 h-1 bg-[#1e293b] group-hover:w-full group-hover:bg-[#F24130] transition-all duration-500 rounded-full"></div>
             </motion.div>
           ))}
         </div>
 
-        {/* BOTÓN DE CONTACTO AL FINAL DE SERVICIOS */}
+        {/* BOTÓN DE CONTACTO FINAL CON ROJO #F24130 */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -63,10 +68,10 @@ export const Servicios = () => {
         >
           <button 
             onClick={() => setIsModalOpen(true)}
-            className="group flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-red-950/20 hover:-translate-y-1 cursor-pointer"
+            className="group flex items-center gap-3 bg-[#F24130] hover:bg-[#D94A3D] text-white px-10 py-4 rounded-2xl font-bold transition-all shadow-lg shadow-[#F24130]/20 hover:-translate-y-1 cursor-pointer"
           >
             <MessageSquare size={20} className="group-hover:rotate-12 transition-transform" />
-            ¿Necesitas una solución técnica? Hablemos
+            ¿Necesitas una solución técnica? Contáctame
           </button>
         </motion.div>
       </div>
