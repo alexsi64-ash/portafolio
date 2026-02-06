@@ -44,7 +44,7 @@ export const skills = {
   backend: ["PHP", "Laravel", "Java", "C++", "SQL"],
   herramientas: ["Git", "GitHub", "Docker", "Android Studio"],
   sistemas: ["Windows 7/10/11", "WSL2", "Fedora Linux", "Debian Linux", "Ubuntu Linux"],
-  diseño: ["Adobe Photoshop", "Illustrator"]
+  // diseño: ["Adobe Photoshop", "Illustrator"]
 };
 
 export const cursos = [

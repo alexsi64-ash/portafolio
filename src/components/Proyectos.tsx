@@ -1,4 +1,4 @@
-import { Hammer, Code2, Construction } from 'lucide-react';
+import { Construction } from 'lucide-react';
 
 export const Proyectos = () => {
   return (

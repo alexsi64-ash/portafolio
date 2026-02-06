@@ -1,5 +1,5 @@
 import { skills } from '../data/cvData';
-import { Layout, Database, Settings, Terminal, Palette } from 'lucide-react';
+import { Layout, Database, Settings, Terminal } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
 
 export const Habilidades = () => {
@@ -37,7 +37,7 @@ export const Habilidades = () => {
     { nombre: 'Backend', datos: skills.backend, icono: <Database size={20} /> },
     { nombre: 'Herramientas', datos: skills.herramientas, icono: <Settings size={20} /> },
     { nombre: 'Sistemas', datos: skills.sistemas, icono: <Terminal size={20} /> },
-    { nombre: 'Diseño', datos: skills.diseño, icono: <Palette size={20} /> },
+    // { nombre: 'Diseño', datos: skills.diseño, icono: <Palette size={20} /> },
   ];
 
   const containerVariants: Variants = {
