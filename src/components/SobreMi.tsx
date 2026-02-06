@@ -52,38 +52,48 @@ export const SobreMi = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative flex justify-center" // Centrado para móvil
           >
-            {/* bg-[#0D0D0D]: El fondo del recuadro vuelve al negro base para resaltar contra el fondo gris de la sección */}
-            <div className="aspect-square bg-[#0D0D0D] rounded-3xl border border-[#1e293b] flex items-center justify-center relative overflow-hidden group shadow-2xl">
-               
-               {/* Rejilla técnica con el AZUL TEC (#1e293b) */}
-               <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] [background-size:40px_40px]"></div>
-               
-               {/* Iconografía Central Rojo #F24130 */}
-               <div className="relative z-10 flex flex-col items-center">
-                  <div className="text-[#F24130] font-black text-8xl mb-2 group-hover:scale-110 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(242,65,48,0.3)]">∑</div>
-                  <div className="text-[#A6A6A6] font-mono text-sm tracking-[0.3em]">OPTIMIZACIÓN_TOTAL</div>
-               </div>
+            {/* Contenedor Principal */}
+            <div className="aspect-square w-full max-w-[400px] bg-[#0D0D0D] rounded-3xl border border-[#1e293b] flex items-center justify-center relative overflow-hidden group shadow-2xl">
+      
+            {/* 1. Rejilla técnica de fondo */}
+            <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] [background-size:40px_40px]"></div>
+      
+            {/* 2. Brillo radial intenso detrás de la cabeza (Efecto Halo) */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,#F24130_0%,transparent_60%)] opacity-30 group-hover:opacity-50 transition-opacity duration-700"></div>
 
-               {/* Brillo dinámico Rojo */}
-               <div className="absolute inset-0 bg-gradient-to-br from-[#F24130]/10 to-transparent"></div>
+            {/* 3. Contenedor de la Imagen con filtros avanzados */}
+            <div className="relative z-10 flex items-end justify-center">
+              <img 
+                src="/perfil1.png"
+                alt="Alexander"
+                className="w-[100%] h-[90%] object-contain object-bottom grayscale brightness-110 contrast-110 
+                          group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700
+                          [mask-image:linear-gradient(to_bottom,black_80%,transparent_100%)]
+                          drop-shadow-[0_0_15px_rgba(242,65,48,0.2)]" 
+              />
+        
+              {/* Capa de brillo sobre la imagen para suavizar el recorte */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-60"></div>
             </div>
+            {/* Brillo dinámico en la esquina */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#F24130]/5 to-transparent pointer-events-none"></div>
+          </div>
 
-            {/* Decoración de Terminal - Fondo Negro #0D0D0D y Borde Azul Tec */}
-            <div className="absolute -bottom-4 -left-4 bg-[#0D0D0D] border border-[#1e293b] p-4 rounded-xl shadow-2xl hidden md:block">
-              <div className="flex gap-1.5 mb-2">
-                <div className="w-2 h-2 rounded-full bg-[#F24130]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#1e293b]"></div>
-                <div className="w-2 h-2 rounded-full bg-[#1e293b]"></div>
-              </div>
-              <code className="text-[10px] text-[#A6A6A6] font-mono">
-                status: <span className="text-[#D94A3D]">evolucionando_...</span><br/>
-                goal: <span className="text-[#F2F2F2]">ind_sys_integration</span>
-              </code>
-            </div>
-          </motion.div>
-
+          {/* Decoración de Terminal con mejor posición */}
+          <div className="absolute -bottom-4 -left-4 bg-[#0D0D0D] border border-[#1e293b] p-4 rounded-xl shadow-2xl hidden lg:block z-30">
+          <div className="flex gap-1.5 mb-2">
+              <div className="w-2 h-2 rounded-full bg-[#F24130] animate-pulse"></div>
+              <div className="w-2 h-2 rounded-full bg-[#1e293b]"></div>
+              <div className="w-2 h-2 rounded-full bg-[#1e293b]"></div>
+          </div>
+          <code className="text-[10px] text-[#A6A6A6] font-mono leading-tight">
+            {">"} identity_check: <span className="text-[#F24130]">SUCCESS</span><br/>
+            {">"} user: <span className="text-[#F2F2F2]">ash.dev</span><br/>
+          </code>
+        </div>
+        </motion.div>
         </div>
       </div>
     </section>

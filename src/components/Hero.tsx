@@ -100,26 +100,22 @@ export const Hero = () => {
         </div>
 
         {/* Lado Derecho: Contenedor más grande y efecto expansivo */}
-<div className="hidden md:flex flex-1 justify-center relative scale-90 lg:scale-110 group">
-    {/* Brillo de fondo más intenso al hacer hover */}
-    <div className="absolute inset-0 bg-red-600/5 blur-[100px] rounded-full group-hover:bg-red-600/15 transition-colors duration-700"></div>
-    
-    {/* 1. Aumentamos w-64/h-64 a w-80/h-80 para que el cuadro sea más grande.
-        2. Quitamos el padding excesivo para que la imagen pueda crecer.
-    */}
-    <div className="relative w-72 h-72 lg:w-96 lg:h-96 bg-slate-900/40 rounded-3xl rotate-3 flex items-center justify-center border border-slate-800 shadow-2xl overflow-hidden backdrop-blur-sm transition-all duration-500 group-hover:rotate-0 group-hover:border-red-600/40 group-hover:scale-105 group-hover:shadow-red-900/20">
-        <img 
-  src="/ash-dev1.png" 
-  alt="Logo Alexander Silva" 
-  className="w-full h-full object-contain p-10 opacity-90 transition-all duration-500 
-             group-hover:scale-110 group-hover:opacity-100 group-hover:p-6
-             image-render-auto antialiased" // Mejora el suavizado en algunos navegadores
-/>
+        <div className="hidden md:flex flex-1 justify-center relative scale-90 lg:scale-110 group">
+          {/* Brillo de fondo más intenso al hacer hover */}
+            <div className="absolute inset-0 bg-red-600/5 blur-[100px] rounded-full group-hover:bg-red-600/15 transition-colors duration-700"></div>
+            <div className="relative w-72 h-72 lg:w-96 lg:h-96 bg-slate-900/40 rounded-3xl rotate-3 flex items-center justify-center border border-slate-800 shadow-2xl overflow-hidden backdrop-blur-sm transition-all duration-500 group-hover:rotate-0 group-hover:border-red-600/40 group-hover:scale-105 group-hover:shadow-red-900/20">
+              <img 
+                src="/ash-dev1.png" 
+                alt="Logo Alexander Silva" 
+                className="w-full h-full object-contain p-10 opacity-90 transition-all duration-500 
+                  group-hover:scale-110 group-hover:opacity-100 group-hover:p-6
+                  image-render-auto antialiased" 
+              />
         
-        {/* Reflejo cristalino extra al pasar el cursor */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    </div>
-</div>
+              {/* Reflejo cristalino extra al pasar el cursor */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+        </div>
       </div>
 
       {/* Decoración de fondo opcional para llenar espacio si la pantalla es muy alta */}

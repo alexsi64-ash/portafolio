@@ -12,7 +12,7 @@ export const Experiencia = () => {
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#F2F2F2] flex items-center gap-3">
-            Trayectoria <span className="text-[#F24130]">Técnica</span>
+            Experiencia <span className="text-[#F24130]">Técnica</span>
           </h2>
           {/* Línea divisoria técnica usando AZUL TEC (#1e293b) */}
           <div className="h-px flex-1 bg-[#1e293b]"></div>
