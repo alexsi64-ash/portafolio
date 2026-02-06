@@ -40,11 +40,11 @@ export const reconocimiento = [
 ];
 
 export const skills = {
-  lenguajes: ["HTML", "CSS", "JavaScript", "PHP", "C++", "Java"], 
-  frameworks: ["React", "Tailwind CSS", "Bootstrap", "Laravel"], 
-  herramientas: ["Git", "GitHub", "Docker", "SQL", "Android Studio", "AutoCAD"], 
-  design: ["Adobe Photoshop", "Illustrator"],
-  os: ["Windows 7/10/11", "Fedora Linux", "Debian Linux", "Ubuntu Linux"] 
+  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Flutter"],
+  backend: ["PHP", "Laravel", "Java", "C++", "SQL"],
+  herramientas: ["Git", "GitHub", "Docker", "Android Studio"],
+  sistemas: ["Windows 7/10/11", "WSL2", "Fedora Linux", "Debian Linux", "Ubuntu Linux"],
+  diseño: ["Adobe Photoshop", "Illustrator"]
 };
 
 export const cursos = [

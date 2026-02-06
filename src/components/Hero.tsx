@@ -1,55 +1,57 @@
-import { personalInfo, reconocimiento } from '../data/cvData';
-import { Mail, MapPin, Download, Trophy } from 'lucide-react';
+import { personalInfo } from '../data/cvData';
+import { MapPin, Download } from 'lucide-react';
 
 export const Hero = () => {
-  // Tomamos el primer premio (el de 2025) para resaltarlo
-  const primerPremio = reconocimiento[0];
-
   return (
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <section className="py-20 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
         
         {/* Lado Izquierdo: Texto */}
-        <div className="flex-1 space-y-6">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
-            <Trophy size={16} />
-            {primerPremio.titulo}
+        <div className="flex-[1.5] space-y-4">    
+          <div className="space-y-2">
+            <code className="text-red-500 text-sm font-mono tracking-widest">
+              &gt; {personalInfo.titulo}
+            </code>
+            <h1 className="text-5xl md:text-7xl font-bold text-white leading-[1.1]">
+              Soy <span className="text-red-600 drop-shadow-[0_0_10px_rgba(220,38,38,0.3)]">
+                {personalInfo.nombre}
+              </span>
+            </h1>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 leading-tight">
-            Soy <span className="text-blue-600">{personalInfo.nombre}</span>
-          </h1>
-          
-          <p className="text-xl text-slate-600 max-w-lg">
-            {personalInfo.titulo}. Especialista en soluciones informáticas y apasionado por el desarrollo de software. 
-            Egresado del <span className="font-semibold">INCOS Santa Cruz</span>.
+          <p className="text-xl text-zinc-400 max-w-xl leading-relaxed">
+            Especialista en soluciones informáticas y apasionado por el desarrollo de software. 
+            Egresado del <span className="text-zinc-200 border-b border-red-900">INCOS Santa Cruz</span>.
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap gap-5 pt-2">
             <a href={`mailto:${personalInfo.email}`} 
-               className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+               className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-900/40 hover:-translate-y-1">
               Contáctame
             </a>
-            <button className="flex items-center gap-2 border-2 border-slate-200 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 transition">
+            <button className="flex items-center gap-2 border-2 border-zinc-800 text-zinc-300 px-8 py-3 rounded-xl font-bold hover:bg-zinc-900 transition-all hover:border-zinc-700">
               Descargar CV <Download size={20} />
             </button>
           </div>
 
-          <div className="flex gap-6 text-slate-500 pt-4">
-            <div className="flex items-center gap-2">
-              <MapPin size={18} />
-              <span className="text-sm">{personalInfo.direccion}</span>
-            </div>
+          <div className="flex items-center gap-2 text-zinc-500 font-mono text-xs">
+            <MapPin size={14} className="text-red-600" />
+            <span>{personalInfo.direccion}</span>
           </div>
         </div>
 
-        {/* Lado Derecho: Un elemento visual o decorativo */}
-        <div className="flex-1 flex justify-center">
-           <div className="relative w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-3xl rotate-3 flex items-center justify-center border-2 border-blue-200 shadow-xl">
-              {/* Aquí luego podrías poner tu foto o un icono grande de código */}
-              <div className="absolute inset-0 bg-white/40 backdrop-blur-sm -rotate-6 rounded-3xl border border-slate-100 -z-10"></div>
-              <span className="text-7xl">💻</span>
-           </div>
+        {/* Lado Derecho: Elemento Visual con Glow mejorado */}
+        <div className="hidden md:flex flex-1 justify-center relative">
+            {/* Resplandor de fondo (Glow) */}
+            <div className="absolute inset-0 bg-red-600/10 blur-[80px] rounded-full"></div>
+            
+            <div className="relative w-72 h-72 lg:w-80 lg:h-80 bg-zinc-900 rounded-3xl rotate-3 flex items-center justify-center border border-red-600/20 shadow-2xl">
+              <div className="absolute inset-0 bg-zinc-800/40 backdrop-blur-sm -rotate-6 rounded-3xl border border-zinc-800 -z-10"></div>
+              
+              <span className="text-8xl drop-shadow-[0_0_20px_rgba(220,38,38,0.4)] select-none">
+                💻
+              </span>
+            </div>
         </div>
 
       </div>

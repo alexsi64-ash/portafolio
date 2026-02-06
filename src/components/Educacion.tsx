@@ -3,7 +3,7 @@ import { GraduationCap, BookOpen, Calendar } from 'lucide-react';
 
 export const Educacion = () => {
   return (
-    <section id="educacion" className="py-20 bg-white">
+    <section id="educacion" className="py-20">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-3">
           <GraduationCap className="text-blue-600" size={32} />

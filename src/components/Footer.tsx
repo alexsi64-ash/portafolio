@@ -1,36 +1,58 @@
-import { personalInfo } from '../data/cvData';
-import { Mail, Phone, MapPin, Github } from 'lucide-react';
+import { Github, Terminal, Cpu } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 py-12 mt-20">
+    <footer className="bg-zinc-950 border-t border-zinc-900 py-12 mt-20">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-8 border-b border-slate-800 pb-12">
-          <div>
-            <h3 className="text-white text-2xl font-bold mb-4">{personalInfo.nombre}</h3>
-            <p className="max-w-xs text-slate-400">
-              {personalInfo.titulo} especializado en desarrollo moderno y gestión de proyectos.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
+          
+          {/* Status del Sistema (Toque de Sistemas) */}
+          <div className="flex items-center gap-3 justify-center md:justify-start">
+            <div className="relative">
+              <div className="w-3 h-3 bg-red-600 rounded-full animate-pulse"></div>
+              <div className="absolute inset-0 w-3 h-3 bg-red-600 rounded-full animate-ping opacity-75"></div>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-zinc-100 text-xs font-mono font-bold tracking-widest uppercase">
+                System Status
+              </span>
+              <span className="text-zinc-500 text-[10px] font-mono">
+                Running: Ubuntu_WSL2 / React_Vite
+              </span>
+            </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <h4 className="text-white font-semibold">Contacto Directo</h4>
-            <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-3 hover:text-blue-400 transition">
-              <Mail size={18} /> {personalInfo.email}
+
+          {/* Logo Central */}
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex items-center gap-2 mb-2">
+              <Terminal size={18} className="text-red-600" />
+              <span className="text-white font-bold tracking-tighter">
+                ASH<span className="text-red-600">.dev</span>
+              </span>
+            </div>
+            <div className="h-px w-12 bg-zinc-800"></div>
+          </div>
+
+          {/* Social / Github */}
+          <div className="flex justify-center md:justify-end">
+            <a 
+              href="https://github.com/TU_USUARIO" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl text-zinc-400 hover:text-white hover:border-red-600/50 transition-all"
+            >
+              <span className="text-xs font-mono">Source Code</span>
+              <Github size={18} className="group-hover:scale-110 transition-transform" />
             </a>
-            <span className="flex items-center gap-3">
-              <Phone size={18} /> {personalInfo.celular}
-            </span>
-            <span className="flex items-center gap-3">
-              <MapPin size={18} /> {personalInfo.direccion}
-            </span>
           </div>
         </div>
-        <div className="mt-8 flex justify-between items-center text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} - Hecho con React & Tailwind</p>
-          <div className="flex gap-4">
-            <a href="https://github.com/TU_USUARIO" target="_blank" className="hover:text-white transition">
-              <Github size={20} />
-            </a>
+
+        {/* Copyright y Stack */}
+        <div className="pt-8 border-t border-zinc-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs font-mono text-zinc-600 uppercase tracking-widest">
+          <p>© {new Date().getFullYear()} — Alexander Silva Huanca</p>
+          <div className="flex items-center gap-2 italic">
+            <Cpu size={12} />
+            <span>Optimized for performance & reliability</span>
           </div>
         </div>
       </div>
