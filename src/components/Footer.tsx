@@ -3,7 +3,7 @@ import { personalInfo } from '../data/cvData';
 
 export const Footer = () => {
   return (
-    <footer className="bg-zinc-950 border-t border-zinc-900 py-12 mt-20">
+    <footer className="bg-zinc-950 border-t border-zinc-900 py-12 mt-10">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
           
@@ -37,7 +37,7 @@ export const Footer = () => {
           {/* Social / Github */}
           <div className="flex justify-center md:justify-end">
             <a 
-              href="https://github.com/alexsi64-ash" 
+              href="https://github.com/alexsi64-ash/portafolio.git" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center gap-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-xl text-zinc-400 hover:text-white hover:border-red-600/50 transition-all"

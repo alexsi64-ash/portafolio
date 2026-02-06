@@ -9,7 +9,7 @@ export const Experiencia = () => {
   );
 
   return (
-    <section id="experiencia" className="py-24 bg-zinc-950">
+    <section id="experiencia" className="py-24">
       <div className="max-w-5xl mx-auto px-6">
         <div className="flex items-center gap-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">

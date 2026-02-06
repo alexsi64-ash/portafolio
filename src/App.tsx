@@ -3,8 +3,11 @@ import { Footer } from "./components/Footer"
 import { Habilidades } from "./components/Habilidades"
 import { Hero } from "./components/Hero"
 import { Navbar } from "./components/Navbar"
+import { Proyectos } from "./components/Proyectos"
 import { Reconocimientos } from "./components/Reconocimientos"
 import { Toaster } from 'sonner';
+import { SobreMi } from "./components/SobreMi"
+import { Servicios } from "./components/Servicios"
 
 function App() {
   return (
@@ -14,9 +17,12 @@ function App() {
         <main className="pt-16">
           <Toaster position="bottom-right" theme="dark" richColors />
           <Hero />
+          <SobreMi />
           <Reconocimientos />
           <Habilidades />
           <Experiencia />
+          <Proyectos />
+          <Servicios />
           <Footer />
         </main>
       </div>

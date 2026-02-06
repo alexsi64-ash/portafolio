@@ -95,3 +95,66 @@ export const experiencia = [
     ]
   }
 ];
+
+export const proyectos = [
+  {
+    titulo: "Sistema de Innovación Productiva 2025",
+    descripcion: "Proyecto ganador del primer lugar en la feria INCOS. Desarrollado para optimizar procesos productivos mediante el seguimiento de métricas en tiempo real.",
+    imagen: "/proyectos/feria-2025.jpg", 
+    tecnologias: ["Laravel", "SQL", "Tailwind CSS", "JavaScript"],
+    github: "", 
+    enlace: "#" 
+  },
+  {
+    titulo: "Gestor de Inventario Industrial",
+    descripcion: "Aplicación inspirada en mi experiencia en Carlos Caballero para el control de almacén y gestión de proveedores con reportes automatizados.",
+    imagen: "/proyectos/inventario.jpg",
+    tecnologias: ["PHP", "MySQL", "Bootstrap"],
+    github: "",
+    enlace: "#"
+  },
+  {
+    titulo: "App Móvil de Asistencia Técnica",
+    descripcion: "Prototipo de aplicación móvil para la gestión de tickets de soporte técnico, facilitando la comunicación entre usuarios y el área de sistemas.",
+    imagen: "/proyectos/soporte-app.jpg",
+    tecnologias: ["Flutter", "Dart", "Firebase"],
+    github: "",
+    enlace: "#"
+  },
+  {
+    titulo: "Dashboard de Métricas Call Center",
+    descripcion: "Herramienta de visualización de datos para supervisión de campañas y rendimiento de operadores en tiempo real.",
+    imagen: "/proyectos/call-center.jpg",
+    tecnologias: ["React", "Chart.js", "Node.js"],
+    github: "",
+    enlace: "#"
+  }
+];
+
+export const servicios = [
+  {
+    titulo: "Optimización de Procesos",
+    descripcion: "Análisis y digitalización de flujos de trabajo. No siempre se necesita un sistema complejo; diseño soluciones ágiles en Excel o Access para resolver problemas inmediatos.",
+    icono: "Zap" 
+  },
+  {
+    titulo: "Desarrollo de Software",
+    descripcion: "Creación de aplicaciones web y móviles a medida, enfocadas en la automatización de tareas y gestión de datos institucionales o industriales.",
+    icono: "Code"
+  },
+  {
+    titulo: "Soporte Técnico Especializado",
+    descripcion: "Mantenimiento preventivo y correctivo de hardware. Configuración de equipos y resolución de incidencias críticas de forma presencial.",
+    icono: "Settings"
+  },
+  {
+    titulo: "Asistencia Remota",
+    descripcion: "Soporte técnico a distancia mediante herramientas como AnyDesk o TeamViewer, garantizando continuidad operativa sin importar la ubicación.",
+    icono: "MousePointer2"
+  },
+  {
+    titulo: "Infraestructura de Redes",
+    descripcion: "Diseño e implementación de cableado estructurado y configuración de conexiones de red para asegurar una comunicación fluida y segura en el área de trabajo.",
+    icono: "Network"
+  }
+];
